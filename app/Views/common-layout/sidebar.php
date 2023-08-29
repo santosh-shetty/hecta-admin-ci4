@@ -44,10 +44,10 @@
                             </button>
                             <ul x-cloak x-show="activeDropdown === 'property'" x-collapse class="sub-menu text-gray-500">
                                 <li>
-                                    <a href="<?= base_url('/all-property')?>">All Properties</a>
+                                    <a href="<?= base_url('/property/all-property')?>">All Properties</a>
                                 </li>
                                 <li>
-                                    <a href="auction-property-list.php">Auction Properties</a>
+                                    <a href="<?=base_url('/property/auction-property');?>">Auction Properties</a>
                                 </li>
                                 <li>
                                     <a href="bank-list.php">Bank & Institutions</a>

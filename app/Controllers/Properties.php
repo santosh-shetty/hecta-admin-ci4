@@ -8,4 +8,8 @@ class Properties extends BaseController
     {
         return view('property/property-list.php');
     }
+    public function auctionProperty()
+    {
+        return view('property/auction-property-list.php');
+    }
 }
