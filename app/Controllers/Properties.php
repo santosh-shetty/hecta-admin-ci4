@@ -4,8 +4,8 @@ namespace App\Controllers;
 
 class Properties extends BaseController
 {
-    public function index(): string
+    public function allProperty()
     {
-        return view('dashboard');
+        return view('property/property-list.php');
     }
 }

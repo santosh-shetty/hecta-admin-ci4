@@ -1,17 +1,17 @@
 <!-- start header section -->
-<?php @include('common-layout/header.php') ?>
+<?php $this->include('common-layout/sidebar.php');  ?>
 <!-- end header section -->
 
 <body x-data="main" class="relative overflow-x-hidden font-nunito text-sm font-normal antialiased" :class="[ $store.app.sidebar ? 'toggle-sidebar' : '', $store.app.theme === 'dark' || $store.app.isDarkMode ?  'dark' : '', $store.app.menu, $store.app.layout,$store.app.rtlClass]">
 
     <div class="main-container min-h-screen text-black dark:text-white-dark" :class="[$store.app.navbar]">
         <!-- start sidebar section -->
-        <?php include 'common-layout/sidebar.php'; ?>
+        <?php $this->include('common-layout/sidebar.php'); ?>
         <!-- end sidebar section -->
 
         <div class="main-content flex flex-col min-h-screen">
             <!-- start header section -->
-            <?php include 'common-layout/topbar.php'; ?>
+            <?php $this->include('common-layout/topbar.php'); ?>
             <!-- end header section -->
 
             <div class="animate__animated p-6" :class="[$store.app.animation]">
