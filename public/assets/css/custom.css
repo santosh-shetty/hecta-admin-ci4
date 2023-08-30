@@ -1,3 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+
+/* ========== Reusable code ===========*/
+
+:root {
+    --primaryClr: #091E25;
+    --secondaryClr: #00BBBB;
+    --pureWhite: #FFFFFF;
+    --headingTextClr: #1D243C;
+    --textClr: #3A3A3A;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+
+}
+
+.primary-btn {
+    background-color: var(--primaryClr) !important;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    padding: 10px 32px;
+}
+
+.secondary-btn {
+    background-color: var(--secondaryClr) !important;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    padding: 10px 32px;
+}
+
+/* .tertiary-btn {
+    background-color: var(--secondaryClr) !important;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    padding: 10px 32px;
+    border: 1px solid;
+} */
+
 /* Start CSS for SEO Tag  */
 .tag-list {
     display: flex;
@@ -331,11 +388,13 @@ table2 {
     background-color: #00BBBB;
     color: #fff;
 }
+
 .actions-list2 {
     background-color: #fff;
     border-radius: 4px;
     border: #fff;
 }
+
 /* Add additional styling for the button on the left if needed */
 
 

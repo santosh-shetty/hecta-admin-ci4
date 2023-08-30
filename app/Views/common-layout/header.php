@@ -24,10 +24,10 @@
     <link defer rel="stylesheet" type="text/css" media="screen" href="<?= base_url()?>assets/css/file-upload-with-preview.min.css" />
     <!-- editor -->
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/quill.snow.css" />
-    <script src="assets/js/perfect-scrollbar.min.js"></script>
-    <script defer src="assets/js/popper.min.js"></script>
-    <script defer src="assets/js/tippy-bundle.umd.min.js"></script>
-    <script defer src="assets/js/sweetalert.min.js"></script>
+    <script src="<?=base_url()?>assets/js/perfect-scrollbar.min.js"></script>
+    <script defer src="<?=base_url()?>assets/js/popper.min.js"></script>
+    <script defer src="<?=base_url()?>assets/js/tippy-bundle.umd.min.js"></script>
+    <script defer src="<?=base_url()?>assets/js/sweetalert.min.js"></script>
 
     <style scoped>
         /* range picker */

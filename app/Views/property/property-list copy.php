@@ -43,10 +43,9 @@
                     </ul>
                     <div class="flex items-center">
                         <div class="flex space-x-4 mb-2">
-                            <a href="<?= base_url('property/add-property')?>">
-                                <button type="button" class="btn-property">
-                                    Add Property
-                                </button></a>
+                            <button type="button" class="btn-property">
+                                Upload
+                            </button>
                             <button type="button" class="btn-property">
                                 Bulk Upload
                             </button>
@@ -643,12 +642,13 @@
 </div>
 <!-- end footer section -->
 
-
-<!-- start sidebar section -->
-<?= $this->include('common-layout/footer.php') ?>
-<!-- end sidebar section -->
-
-
+<script src="<?= base_url() ?>assets/js/alpine-collaspe.min.js"></script>
+<script src="<?= base_url() ?>assets/js/alpine-persist.min.js"></script>
+<script defer src="<?= base_url() ?>assets/js/alpine-ui.min.js"></script>
+<script defer src="<?= base_url() ?>assets/js/alpine-focus.min.js"></script>
+<script defer src="<?= base_url() ?>assets/js/alpine.min.js"></script>
+<script src="<?= base_url() ?>assets/js/custom.js"></script>
+<script src="<?= base_url() ?>assets/js/quill.js"></script>
 <script>
     const defaultParams = {
         id: null,
@@ -1125,6 +1125,6 @@
         }));
     });
 </script>
-<!-- </body>
+</body>
 
-</html>  -->
+</html>

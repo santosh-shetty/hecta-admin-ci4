@@ -1,16 +1,16 @@
 <!-- start sidebar section -->
-<?php @include('common-layout/header.php') ?>
+<?= $this->include('common-layout/header.php') ?>
 <!-- end sidebar section -->
 
 <div class="main-container min-h-screen text-black dark:text-white-dark" :class="[$store.app.navbar]">
     <!-- start sidebar section -->
-    <?php @include('common-layout/sidebar.php') ?>
+    <?= $this->include('common-layout/sidebar.php') ?>
     <!-- end sidebar section -->
 
     <div class="main-content flex min-h-screen flex-col">
 
         <!-- start header section -->
-        <?php @include('common-layout/topbar.php') ?>
+        <?= $this->include('common-layout/topbar.php') ?>
         <!-- end header section -->
 
         <div class="animate__animated p-6" :class="[$store.app.animation]">
@@ -83,7 +83,7 @@
                     </div>
                     <!-- End User Information  -->
 
-                    <button type="button" class="btn btn-success m-auto mt-5">Add User</button>
+                    <button type="button" class="btn btn-success m-auto mt-5 primary-btn">Add User</button>
                 </form>
                 <!-- end main content section -->
             </div>
@@ -118,14 +118,14 @@
 </script>
 
 <!-- start sidebar section -->
-<?php @include('common-layout/footer.php') ?>
+<?= $this->include('common-layout/footer.php') ?>
 <!-- end sidebar section -->
 
 <script>
     // single image upload
     new FileUploadWithPreview.FileUploadWithPreview('myFirstImage', {
         images: {
-            baseImage: 'assets/images/file-preview.svg',
+            baseImage: '<?= base_url('assets/images/file-preview.svg')?>',
             backgroundImage: '',
         },
     });
@@ -133,7 +133,7 @@
     // multiple image upload
     new FileUploadWithPreview.FileUploadWithPreview('mySecondImage', {
         images: {
-            baseImage: 'assets/images/file-preview.svg',
+            baseImage: '<?= base_url('assets/images/file-preview.svg')?>',
             backgroundImage: '',
         },
         multiple: true,

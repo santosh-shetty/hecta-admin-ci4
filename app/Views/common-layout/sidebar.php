@@ -3,10 +3,10 @@
     <nav x-data="sidebar" class="sidebar fixed bottom-0 top-0 z-50 h-full min-h-screen w-[260px] shadow-[5px_0_25px_0_rgba(94,92,154,0.1)] transition-all duration-300">
         <div class="h-full bg-white dark:bg-[#0e1726]">
             <div class="flex items-center justify-between px-4 py-3">
-                <a href="index.php" class="main-logo flex shrink-0 items-center">
-                    <img class="ml-[5px] w-60 flex-none" src="assets/imagess/hecta-logo.svg" alt="image" />
+                <a href="<?=base_url()?>index.php" class="main-logo flex shrink-0 items-center">
+                    <img class="ml-[5px] w-60 flex-none" src="<?= base_url()?>assets/imagess/hecta-logo.svg" alt="image" />
                 </a>
-                <a href="javascript:;" class="collapse-icon flex h-8 w-8 items-center rounded-full transition duration-300 hover:bg-gray-500/10 rtl:rotate-180 dark:text-white-light dark:hover:bg-dark-light/10" @click="$store.app.toggleSidebar()">
+                <a href="<?=base_url()?>javascript:;" class="collapse-icon flex h-8 w-8 items-center rounded-full transition duration-300 hover:bg-gray-500/10 rtl:rotate-180 dark:text-white-light dark:hover:bg-dark-light/10" @click="$store.app.toggleSidebar()">
                     <svg class="m-auto h-5 w-5" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13 19L7 12L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         <path opacity="0.5" d="M16.9998 19L10.9998 12L16.9998 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -15,7 +15,7 @@
             </div>
             <ul class="perfect-scrollbar relative h-[calc(100vh-80px)] space-y-0.5 overflow-y-auto overflow-x-hidden p-4 py-0 font-semibold" x-data="{ activeDropdown: 'dashboard' }">
                 <li class="nav-item">
-                    <a href="index.php" class="group">
+                    <a href="<?=base_url()?>index.php" class="group">
                         <div class="flex items-center">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.6667 7.5C11.4306 7.5 11.2326 7.42014 11.0729 7.26042C10.9132 7.10069 10.8333 6.90278 10.8333 6.66667V3.33333C10.8333 3.09722 10.9132 2.89931 11.0729 2.73958C11.2326 2.57986 11.4306 2.5 11.6667 2.5H16.6667C16.9028 2.5 17.1007 2.57986 17.2604 2.73958C17.4201 2.89931 17.5 3.09722 17.5 3.33333V6.66667C17.5 6.90278 17.4201 7.10069 17.2604 7.26042C17.1007 7.42014 16.9028 7.5 16.6667 7.5H11.6667ZM3.33333 10.8333C3.09722 10.8333 2.89931 10.7535 2.73958 10.5938C2.57986 10.434 2.5 10.2361 2.5 10V3.33333C2.5 3.09722 2.57986 2.89931 2.73958 2.73958C2.89931 2.57986 3.09722 2.5 3.33333 2.5H8.33333C8.56944 2.5 8.76736 2.57986 8.92708 2.73958C9.08681 2.89931 9.16667 3.09722 9.16667 3.33333V10C9.16667 10.2361 9.08681 10.434 8.92708 10.5938C8.76736 10.7535 8.56944 10.8333 8.33333 10.8333H3.33333ZM11.6667 17.5C11.4306 17.5 11.2326 17.4201 11.0729 17.2604C10.9132 17.1007 10.8333 16.9028 10.8333 16.6667V10C10.8333 9.76389 10.9132 9.56597 11.0729 9.40625C11.2326 9.24653 11.4306 9.16667 11.6667 9.16667H16.6667C16.9028 9.16667 17.1007 9.24653 17.2604 9.40625C17.4201 9.56597 17.5 9.76389 17.5 10V16.6667C17.5 16.9028 17.4201 17.1007 17.2604 17.2604C17.1007 17.4201 16.9028 17.5 16.6667 17.5H11.6667ZM3.33333 17.5C3.09722 17.5 2.89931 17.4201 2.73958 17.2604C2.57986 17.1007 2.5 16.9028 2.5 16.6667V13.3333C2.5 13.0972 2.57986 12.8993 2.73958 12.7396C2.89931 12.5799 3.09722 12.5 3.33333 12.5H8.33333C8.56944 12.5 8.76736 12.5799 8.92708 12.7396C9.08681 12.8993 9.16667 13.0972 9.16667 13.3333V16.6667C9.16667 16.9028 9.08681 17.1007 8.92708 17.2604C8.76736 17.4201 8.56944 17.5 8.33333 17.5H3.33333Z" fill="#00BBBB" />
@@ -50,15 +50,15 @@
                                     <a href="<?=base_url('/property/auction-property');?>">Auction Properties</a>
                                 </li>
                                 <li>
-                                    <a href="bank-list.php">Bank & Institutions</a>
+                                    <a href="<?=base_url()?>bank-list.php">Bank & Institutions</a>
                                 </li>
                                 <li>
-                                    <a href="property-category.php">Property Categories</a>
+                                    <a href="<?=base_url()?>property-category.php">Property Categories</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="leads.php" class="group">
+                            <a href="<?=base_url('leads')?>" class="group">
                                 <div class="flex items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                         <path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm17-1h-4v8h-2v-8h-4l5-6 5 6z" />
@@ -68,7 +68,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="customers.php" class="group">
+                            <a href="<?=base_url('customers')?>" class="group">
                                 <div class="flex items-center">
                                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
                                         <path d="M7 16.488l1.526-.723c1.792-.81 2.851-.344 4.349.232 1.716.661 2.365.883 3.077 1.164 1.278.506.688 2.177-.592 1.838-.778-.206-2.812-.795-3.38-.931-.64-.154-.93.602-.323.818 1.106.393 2.663.79 3.494 1.007.831.218 1.295-.145 1.881-.611.906-.72 2.968-2.909 2.968-2.909.842-.799 1.991-.135 1.991.72 0 .23-.083.474-.276.707-2.328 2.793-3.06 3.642-4.568 5.226-.623.655-1.342.974-2.204.974-.442 0-.922-.084-1.443-.25-1.825-.581-4.172-1.313-6.5-1.6v-5.662zm-1 6.538h-4v-8h4v8zm1-7.869v-1.714c-.006-1.557.062-2.447 1.854-2.861 1.963-.453 4.315-.859 3.384-2.577-2.761-5.092-.787-7.979 2.177-7.979 2.907 0 4.93 2.78 2.177 7.979-.904 1.708 1.378 2.114 3.384 2.577 1.799.415 1.859 1.311 1.853 2.879 0 .13-.011 1.171 0 1.665-.483-.309-1.442-.552-2.187.106-.535.472-.568.504-1.783 1.629-1.75-.831-4.456-1.883-6.214-2.478-.896-.304-2.04-.308-2.962.075l-1.683.699z" />
@@ -93,15 +93,15 @@
                             </button>
                             <ul x-cloak x-show="activeDropdown === 'order'" x-collapse class="sub-menu text-gray-500">
                                 <li>
-                                    <a href="order.php">All Orders</a>
+                                    <a href="<?=base_url('/all-orders')?>">All Orders</a>
                                 </li>
                                 <li>
-                                    <a href="invoice.php">Invoice</a>
+                                    <a href="<?=base_url('invoice')?>">Invoice</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="user-wallet.php" class="group">
+                            <a href="<?=base_url()?>user-wallet.php" class="group">
                                 <div class="flex items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                         <path d="M7.972 2h-6.972l.714 5h2.021l-.429-3h3.694c1.112 1.388 1.952 2 4.277 2h9.283l-.2 1h2.04l.6-3h-11.723c-1.978 0-2.041-.417-3.305-2zm16.028 7h-24l2 13h20l2-13z" />
@@ -111,7 +111,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="reports.php" class="group">
+                            <a href="<?=base_url()?>reports.php" class="group">
                                 <div class="flex items-center">
                                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
                                         <path d="M22 0h-20v24h14l6-6v-18zm-6 18h4.36l-4.36 4.385v-4.385zm-3 1h-8v1h8v-1zm0-3h-8v1h8v-1zm6-2v-1h-14v1h14zm-7.059-4.968c-1.147-.265-2.214-.497-1.697-1.473 1.573-2.97.417-4.559-1.244-4.559-1.694 0-2.821 1.65-1.244 4.559.532.982-.575 1.214-1.697 1.473-1.024.237-1.062.745-1.059 1.635l.001.333h7.997l.001-.323c.004-.896-.03-1.407-1.058-1.645zm7.059.968h-4v1h4v-1zm0-2v-1h-4v1h4zm0-4h-4v1h4v-1z" />
@@ -120,6 +120,7 @@
                                 </div>
                             </a>
                         </li>
+                        
                         <li class="menu nav-item">
                             <button type="button" class="nav-link group" :class="{'active' : activeDropdown === 'blogs'}" @click="activeDropdown === 'blogs' ? activeDropdown = null : activeDropdown = 'blogs'">
                                 <div class="flex items-center">
@@ -136,15 +137,47 @@
                             </button>
                             <ul x-cloak x-show="activeDropdown === 'blogs'" x-collapse class="sub-menu text-gray-500">
                                 <li>
-                                    <a href="all-blogs.php">All Blogs</a>
+                                    <a href="<?=base_url('/all-blogs')?>">All Blogs</a>
                                 </li>
                                 <li>
-                                    <a href="blog-categories.php">Blog Categories</a>
+                                    <a href="<?=base_url('/blog/add-blog')?>">Add Blog</a>
+                                </li>
+                                <li>
+                                    <a href="<?=base_url('/blog-categories')?>">Blog Categories</a>
+                                </li>
+                                <li>
+                                    <a href="<?=base_url('/blog-categories/add-category')?>">Add Categories</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu nav-item">
+                            <button type="button" class="nav-link group" :class="{'active' : activeDropdown === 'users'}" @click="activeDropdown === 'users' ? activeDropdown = null : activeDropdown = 'users'">
+                                <div class="flex items-center">
+                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                        <path d="M7 16.488l1.526-.723c1.792-.81 2.851-.344 4.349.232 1.716.661 2.365.883 3.077 1.164 1.278.506.688 2.177-.592 1.838-.778-.206-2.812-.795-3.38-.931-.64-.154-.93.602-.323.818 1.106.393 2.663.79 3.494 1.007.831.218 1.295-.145 1.881-.611.906-.72 2.968-2.909 2.968-2.909.842-.799 1.991-.135 1.991.72 0 .23-.083.474-.276.707-2.328 2.793-3.06 3.642-4.568 5.226-.623.655-1.342.974-2.204.974-.442 0-.922-.084-1.443-.25-1.825-.581-4.172-1.313-6.5-1.6v-5.662zm-1 6.538h-4v-8h4v8zm1-7.869v-1.714c-.006-1.557.062-2.447 1.854-2.861 1.963-.453 4.315-.859 3.384-2.577-2.761-5.092-.787-7.979 2.177-7.979 2.907 0 4.93 2.78 2.177 7.979-.904 1.708 1.378 2.114 3.384 2.577 1.799.415 1.859 1.311 1.853 2.879 0 .13-.011 1.171 0 1.665-.483-.309-1.442-.552-2.187.106-.535.472-.568.504-1.783 1.629-1.75-.831-4.456-1.883-6.214-2.478-.896-.304-2.04-.308-2.962.075l-1.683.699z" />
+                                    </svg>
+                                    <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Users</span>
+                                </div>
+                                <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'users'}">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <ul x-cloak x-show="activeDropdown === 'users'" x-collapse class="sub-menu text-gray-500">
+                                <li>
+                                    <a href="<?=base_url('/all-users')?>">All Users</a>
+                                </li>
+                                <li>
+                                    <a href="<?=base_url('/users/add-user')?>">Add User</a>
+                                </li>
+                                <li>
+                                    <a href="<?=base_url('/users/wallet')?>">Wallet</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="index.php" class="group">
+                            <a href="<?=base_url()?>index.php" class="group">
                                 <div class="flex items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                         <path d="M23.269 19.743l-11.945-11.945c-.557-.557-.842-1.33-.783-2.115.115-1.485-.395-3.009-1.529-4.146-1.03-1.028-2.376-1.537-3.723-1.537-.507 0-1.015.072-1.505.216l3.17 3.17c.344 1.589-1.959 3.918-3.567 3.567l-3.169-3.17c-.145.492-.218 1-.218 1.509 0 1.347.51 2.691 1.538 3.721 1.135 1.136 2.66 1.645 4.146 1.53.783-.06 1.557.226 2.113.783l11.946 11.944c.468.468 1.102.73 1.763.73 1.368 0 2.494-1.108 2.494-2.494 0-.638-.244-1.276-.731-1.763zm-1.769 2.757c-.553 0-1-.448-1-1s.447-1 1-1c.553 0 1 .448 1 1s-.447 1-1 1zm-7.935-15.289l5.327-5.318c.584-.585 1.348-.878 2.113-.878.764 0 1.529.292 2.113.878.589.587.882 1.357.882 2.125 0 .764-.291 1.528-.873 2.11l-5.326 5.318-4.236-4.235zm-3.53 9.18l-5.227 5.185c-.227.23-.423.488-.574.774l-.301.58-2.1 1.07-.833-.834 1.025-2.146.58-.302c.286-.15.561-.329.79-.558l5.227-5.185 1.413 1.416z" />

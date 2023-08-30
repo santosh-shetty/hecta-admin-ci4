@@ -1,17 +1,17 @@
 <!-- start sidebar section -->
-<?php @include('common-layout/header.php') ?>
+<?= $this->include('common-layout/header.php') ?>
 <!-- end sidebar section -->
 
 
 <div class="main-container min-h-screen text-black dark:text-white-dark" :class="[$store.app.navbar]">
     <!-- start sidebar section -->
-    <?php @include('common-layout/sidebar.php') ?>
+    <?= $this->include('common-layout/sidebar.php') ?>
     <!-- end sidebar section -->
 
     <div class="main-content flex min-h-screen flex-col">
 
         <!-- start header section -->
-        <?php @include('common-layout/topbar.php') ?>
+        <?= $this->include('common-layout/topbar.php') ?>
         <!-- end header section -->
 
         <div class="animate__animated p-6" :class="[$store.app.animation]">
@@ -62,8 +62,7 @@
                                     <label for="PropertyExcerpt ">Property Excerpt </label>
                                     <!-- <input id="PropertyExcerpt " type="text" placeholder="Enter Property Excerpt "
                                         class="form-input" required /> -->
-                                    <textarea rows="1"
-                                        class="form-textarea"></textarea>
+                                    <textarea rows="1" class="form-textarea"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="displayTo">Display to </label>
@@ -97,33 +96,37 @@
                                         <option value="N/A">N/A</option>
                                     </select>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="proName">Possession Date</label>
-                                    <input id="proName" type="date" placeholder="Enter Possession Date"
-                                        class="form-input" required />
-                                </div>
-                                <div class="form-group">
-                                    <label for="proPrice">Auction Start Date Time</label>
-                                    <input id="proPrice" type="date" placeholder="Enter Auction Start Date Time"
-                                        class="form-input" required />
-                                </div>
                                 <div class="form-group">
                                     <label for="proPrice">Auction Time Extension</label>
                                     <input id="proPrice" type="text" placeholder="Enter Auction Time Extension"
                                         class="form-input" required />
                                 </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="form-group">
+                                        <label for="proPrice">Reserve Price</label>
+                                        <input id="proPrice" type="number" placeholder="Enter Reserve Price"
+                                            class="form-input" required />
+                                    </div>
+                                    <div class="form-group">
 
-                                <div class="form-group">
-                                    <label for="proPrice">Auction End Date Time</label>
-                                    <input id="proPrice" type="date" placeholder="Enter Auction End Date Time"
-                                        class="form-input" required />
+                                        <label for="proName">Possession Date</label>
+                                        <input id="proName" type="date" placeholder="Enter Possession Date"
+                                            class="form-input" required />
+                                    </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="proPrice">Reserve Price</label>
-                                    <input id="proPrice" type="number" placeholder="Enter Reserve Price"
-                                        class="form-input" required />
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                                    <div class="form-group">
+                                        <label for="proPrice">Auction Start Date Time</label>
+                                        <input id="proPrice" type="date" placeholder="Enter Auction Start Date Time"
+                                            class="form-input" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="proPrice">Auction End Date Time</label>
+                                        <input id="proPrice" type="date" placeholder="Enter Auction End Date Time"
+                                            class="form-input" required />
+                                    </div>
                                 </div>
                                 <!-- <div class="form-group">
                                     <label class="inline-flex mr-2">
@@ -135,18 +138,21 @@
                                         <span class="peer-checked:text-dark">Inactive</span>
                                     </label>
                                 </div> -->
-                                <div class="form-group">
-                                    <label class="inline-flex ">
-                                        <label for="EMDPaymentProcess">Auction Type</label>
-                                        <input type="checkbox" class="form-checkbox text-dark rounded-full ml-3" />
-                                        <span>Open</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="inline-flex">
-                                        <input type="checkbox" class="form-checkbox text-dark rounded-full ml-3" />
-                                        <label for="EMDPaymentProcess">Is Auctionable</label>
-                                    </label>
+                                <div class="grid grid-cols-2 sm:grid-cols-2 gap-4">
+                                    <div class="form-group">
+                                        <label for="">Auction Type</label>
+                                        <label class="inline-flex  mt-1">
+                                            <input type="checkbox" class="form-checkbox text-dark rounded-full " />
+                                            <span>Open</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Is Auctionable</label>
+                                        <label class="inline-flex mt-1">
+                                            <input type="checkbox" class="form-checkbox text-dark rounded-full " />
+                                            <span>Yes</span>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="proPrice">Application End Date</label>
@@ -190,16 +196,19 @@
                                     <input id="EMDPaymentProcess" type="text" placeholder="Enter EMD Payment Process"
                                         class="form-input" required />
                                 </div>
-                                <div class="form-group">
-                                    <label for="inspectionDate">Inspection Date</label>
-                                    <input id="inspectionDate" type="date" placeholder="Enter Inspection Date"
-                                        class="form-input" required />
-                                </div>
+                                <div class="grid grid-cols-2 sm:grid-cols-2 gap-4">
 
-                                <div class="form-group">
-                                    <label for="inspectionEndTime">Inspection End Time</label>
-                                    <input id="inspectionEndTime" type="date" placeholder="Enter Inspection End Time"
-                                        class="form-input" required />
+                                    <div class="form-group">
+                                        <label for="inspectionDate">Inspection Date</label>
+                                        <input id="inspectionDate" type="date" placeholder="Enter Inspection Date"
+                                            class="form-input" required />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="inspectionEndTime">Inspection End Time</label>
+                                        <input id="inspectionEndTime" type="date"
+                                            placeholder="Enter Inspection End Time" class="form-input" required />
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
@@ -267,48 +276,57 @@
                         </div>
                         <div class="grid grid-cols-1 gap-6 pt-5 lg:grid-cols-2 mb-5">
                             <div class="form-group">
-                                <label for="Address">Address</label>
-                                <input id="Address" type="text" placeholder="Enter Address" class="form-input"
-                                    required />
+                                <label for="Addres">Address</label>
+                                <textarea rows="1" class="form-textarea"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="Location">Location</label>
                                 <input id="Location" type="text" placeholder="Enter Location" class="form-input"
                                     required />
                             </div>
-
-                            <div class="form-group">
-                                <label for="City">City</label>
-                                <input id="City" type="text" placeholder="Enter City" class="form-input" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="state">State</label>
-                                <select class="selectize">
-                                    <option selected value="Delhi">Delhi</option>
-                                    <option value="Maharashtra">Maharashtra</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="Pincode">Pincode</label>
-                                <input id="Pincode" type="number" placeholder="Enter Pincode" class="form-input"
-                                    required />
-                            </div>
-                            <div class="form-group">
-                                <label for="Latitude">Latitude</label>
-                                <input id="Pincode" type="number" placeholder="Enter Latitude" class="form-input"
-                                    required />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="Longitude">Longitude</label>
-                                <input id="Longitude" type="number" placeholder="Enter Longitude" class="form-input"
-                                    required />
-                            </div>
                             <div class="form-group">
                                 <label for="Street">Street</label>
                                 <input id="Street" type="text" placeholder="Enter Street" class="form-input" required />
                             </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="form-group">
+                                    <label for="City">City</label>
+                                    <input id="City" type="text" placeholder="Enter City" class="form-input" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <select class="selectize">
+                                        <option selected value="Delhi">Delhi</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Nearby Locations">Nearby Locations</label>
+                                <input id="Nearby Locations" type="text" placeholder="Enter Nearby Locations"
+                                    class="form-input" required />
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <div class="form-group">
+                                    <label for="Pincode">Pincode</label>
+                                    <input id="Pincode" type="number" placeholder="Enter Pincode" class="form-input"
+                                        required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Latitude">Latitude</label>
+                                    <input id="Pincode" type="number" placeholder="Enter Latitude" class="form-input"
+                                        required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Longitude">Longitude</label>
+                                    <input id="Longitude" type="number" placeholder="Enter Longitude" class="form-input"
+                                        required />
+                                </div>
+                            </div>
+
 
                             <div class="form-group">
                                 <label class="inline-flex">
@@ -318,11 +336,7 @@
                                 </label>
                             </div>
 
-                            <div class="form-group">
-                                <label for="Nearby Locations">Nearby Locations</label>
-                                <input id="Nearby Locations" type="text" placeholder="Enter Nearby Locations"
-                                    class="form-input" required />
-                            </div>
+
 
                         </div>
                     </div>
@@ -489,23 +503,29 @@
                             <div class="grid grid-cols-1 gap-6 pt-5 lg:grid-cols-2">
 
                                 <div class="form-group">
-                                    <label for="PropertyTitle">SEO Tittle</label>
-                                    <input id="PropertyTitle" type="text" placeholder="Enter Property Title"
+                                    <label for="PropertyTitle">Tittle</label>
+                                    <input id="PropertyTitle" type="text" placeholder="Enter SEO Title"
                                         class="form-input" required />
                                 </div>
                                 <div class="form-group">
-                                    <label for="seoKeywords">SEO Keywords</label>
+                                    <label for="seoKeywords">Keywords</label>
                                     <input id="seoKeywords" type="text" placeholder="Enter SEO Keywords"
                                         class="form-input" required />
                                     <div class="tag-list" id="tagList"></div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-12 gap-6 pt-5 lg:grid-cols-12">
+                                <div class="form-group">
+                                    <label for="seoDesc ">Description</label>
+                                    <textarea rows="5" class="form-textarea"></textarea>
                                 </div>
                             </div>
 
                         </div>
 
                     </div>
-                    <button type="button" class="btn btn-success m-auto mt-5">Add Property</button>
                     <!-- End SEO  -->
+                    <button type="button" class="btn btn-success m-auto mt-5">Add Property</button>
                 </form>
                 <!-- end main content section -->
             </div>
@@ -572,5 +592,5 @@
 </script>
 
 <!-- start sidebar section -->
-<?php @include('common-layout/footer.php') ?>
+<?= $this->include('common-layout/footer.php') ?>
 <!-- end sidebar section -->

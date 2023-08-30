@@ -1,20 +1,29 @@
-<script src="assets/js/alpine-collaspe.min.js"></script>
-<script src="assets/js/alpine-persist.min.js"></script>
-<script defer src="assets/js/alpine-ui.min.js"></script>
-<script defer src="assets/js/alpine-focus.min.js"></script>
-<script defer src="assets/js/alpine.min.js"></script>
-<script src="assets/js/custom.js"></script>
-<script defer src="assets/js/apexcharts.js"></script>
+<script src="<?= base_url() ?>assets/js/alpine-collaspe.min.js"></script>
+<script src="<?= base_url() ?>assets/js/alpine-persist.min.js"></script>
+<script defer src="<?= base_url() ?>assets/js/alpine-ui.min.js"></script>
+<script defer src="<?= base_url() ?>assets/js/alpine-focus.min.js"></script>
+<script defer src="<?= base_url() ?>assets/js/alpine.min.js"></script>
+<script src="<?= base_url() ?>assets/js/custom.js"></script>
+<script defer src="<?= base_url() ?>assets/js/apexcharts.js"></script>
+<!-- All properties -->
+<script src="<?= base_url() ?>assets/js/alpine-collaspe.min.js"></script>
+<script src="<?= base_url() ?>assets/js/alpine-persist.min.js"></script>
+<script defer src="<?= base_url() ?>assets/js/alpine-ui.min.js"></script>
+<script defer src="<?= base_url() ?>assets/js/alpine-focus.min.js"></script>
+<script defer src="<?= base_url() ?>assets/js/alpine.min.js"></script>
+<script src="<?= base_url() ?>assets/js/custom.js"></script>
+<script src="<?= base_url() ?>assets/js/quill.js"></script>
+
 <!-- Date and Range -->
-<script src="assets/js/flatpickr.js"></script>
-<script src="assets/js/nouislider.min.js"></script>
+<script src="<?= base_url() ?>assets/js/flatpickr.js"></script>
+<script src="<?= base_url() ?>assets/js/nouislider.min.js"></script>
 <!-- Select -->
-<script src="assets/js/nice-select2.js"></script>
-<script src="assets/js/easymde.min.js"></script>
-    <!-- File Upload -->
-<script src="assets/js/file-upload-with-preview.iife.js"></script>
+<script src="<?= base_url() ?>assets/js/nice-select2.js"></script>
+<script src="<?= base_url() ?>assets/js/easymde.min.js"></script>
+<!-- File Upload -->
+<script src="<?= base_url() ?>assets/js/file-upload-with-preview.iife.js"></script>
 <!-- Editor -->
-<script src="assets/js/quill.js"></script>
+<script src="<?= base_url() ?>assets/js/quill.js"></script>
 <script>
     document.addEventListener('alpine:init', () => {
         // main section
